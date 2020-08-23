@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel=stylesheet type="text/css" href="CSSreset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/65e4aa0e56.js" crossorigin="anonymous"></script>
+	
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+	*{
+	text-decoration:none;
+	color:#000;
+	font-family: 'Noto Sans TC', sans-serif;
+	}
+	
+	body{
+	width:100vw;
+	}
+	
+	.head_bar{
+	width:100vw;
+	height:40px;
+	position:fixed;
+	color:#fff;
+	font-size:40px;
+	line-height:40px;
+	padding-left:5px;
+	}
+	
+	.wrap_1{
+	width:100vw;
+	height:100vh ;
+	}
+	
+	.content{
+	width:auto ;
+	height:100% ;
+	padding: 45px 15px 0 15px;
+	background:linear-gradient(0deg,#f35151e3,#f3c7c7,#f5d1d1);
+	box-sizing: border-box;
+	
+	}
+	
+	.column1{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position: relative;
+	}
+	
+	.introduct_apple{
+	width:50%;
+	margin-right:10px;
+	}
+	
+	.introduct_apple h2{
+	font-weight:30;
+	font-size:30px;
+	font-style:italic;
+	text-decoration:underline;
+	text-shadow: 2px 2px 3px #333;
+	color:#FFF;
+	}
+
+	
+	.introduct_apple p{
+	font-size:25px;
+	line-height:35px;
+	text-align:end;
+	text-shadow: 2px 2px 3px #333;
+	color:#FFF;
+	}
+	
+	.column1 .apple_img{
+	background:url("pic/apple4.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:40%;
+	height:115px;
+	}
+
+	.column2{
+	width:90%;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	position: relative;
+	}
+	
+	.column2 .tiny_box{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	border:0.7em double #ff5d5d;
+	border-radius:25%;
+	margin: 33px 5px 15px 5px;
+	padding:3px;
+	background:#fff;
+	}
+	
+	.column2 .tiny_box img{
+	width:75%;
+	}
+	
+	.column2 .tiny_box .icon_box{
+	width: 70px;
+    height: 70px;
+    margin-top: -45px;
+	position:relative;
+	background:#FFF;
+	border-radius:50%;
+	}
+	
+	.column2 .tiny_box .icon_box:before{
+	content: '';
+    width: 70px;
+    height: 70px;
+    border-top: 0.7em double #ff5d5d;
+    border-right: 0.7em double #ff5d5d;
+    border-left: 0.7em double transparent;
+    border-bottom: 0.7em double transparent;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    border-radius: 50%;
+	}
+	
+	.background_text p{
+	position: absolute;
+    background: transparent;
+    font-size: 125px;
+    color: #fff;
+    top: 215px;
+    left: -84px;
+	text-shadow: -3px 9px 15px #dd93c1;
+    transform: rotate(270deg);
+    opacity: 0.8;
+	display:none;
+	}
+	
+	@media screen and (min-width: 760px){
+		.head_bar{
+		height:100px;
+		font-size:80px;
+		line-height:100px;
+		padding-left:40px;
+		}
+		
+		.wrap_1{
+		width:100vw;
+		height:100vh;
+		}
+		
+		.content{
+		padding: 100px 15px 0 15px;
+		}
+		
+		.column1{
+		height:40vh;
+		margin-bottom:20px;
+		
+		}
+
+		
+		.column1 .apple_img{
+		background:url("pic/apple3.jpg") ;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 40%;
+		height: 40vh;
+		}
+		
+		.introduct_apple {
+		width: auto;
+		margin-right: 10px;
+		padding-left: 70px;
+		}
+		
+		.column2{
+		flex-direction:row;
+		height:38vh;
+		}
+		
+		.column2 .tiny_box{
+		display:flex;
+		width:200px;
+		height:160px;
+		line-height:20px;
+		font-size:17px;
+		flex-direction:column;
+		text-align:justify;
+		margin:auto;
+		margin-top: 35px;
+		padding:3px 20px 15px 20px;
+		}
+		
+		.column2 .tiny_box .icon_box {
+		width: 85px;
+		height: 75px;
+		margin-top: -52px;
+		}
+		
+		.column2 .tiny_box img{
+		width: 76%;
+		justify-content: center;
+		display: flex;
+		margin:auto;
+		}
+		
+		.column2 .tiny_box .icon_box:before {
+		width: 83px;
+		height: 83px;
+		top: -13px;
+		left: -11px;
+		}
+		
+		.column2 .tiny_box h3{
+		font-size:20px;
+		line-height:25px;
+		}
+		
+		.background_text p{
+		display:block;
+		}
+		
+	}
+	
+	</style>
+	
+	</head>
+	
+	
+	<body>
+		<div class="head_bar">
+			<h1>ISAN FARM</h1>
+		</div>
+		
+		<div class="wrap_1">
+			<div class="content">
+				<div class="background_text">
+					<p>APPLE</p>  
+				</div>
+				<div class="column1">
+						<div class="introduct_apple">
+						<h2>梨山蜜蘋果</h2>
+						<p>結蜜</p>
+						<pre style="left:-20px;position: relative;">正是蜜蘋果越挫越勇的證明</pre>
+					</div>
+					<div class="apple_img"></div>
+				</div>
+				<div class="column2">
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/honey.png"></img></div>
+						<h3>「蜜」是怎麼來的</h3>
+						<p>在日夜溫差大的地區，蘋果將澱粉凝結為「糖分」，成為我們所熟知的琥珀般結晶。</p>
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/blender.png"></img></div>
+						<h3>簡單飲食</h3>
+						<p>喝膩了甜膩的碳酸飲料及卡路里大餐，不如利用蘋果做一份爽口的健康飲料如何?</p>				
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/skin.png"></img></div>
+						<h3>皮膚光滑澈</h3>
+						<p>豐富的維他命C及蘋果多酚，讓你的肌膚像蘋果一樣光亮透紅。</p>					
+					</div>				
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="wrap_2">
+		
+		
+		</div>
+		
+		<div class="wrap_3">
+		
+		
+		</div>
+		
+		<div class="wrap_4">
+		
+		
+		</div>
+
+		
+		
+	
+	
+	</body>
+	
+	<script>
+	var currentStep = 1;
+	var totalSteps = 4;
+	var animating = false;
+	var touchStart = [0,0];
+
+	
+	function onSwipe() {
+    var gnStartX = -1;
+    var gnEndX = -1;
+
+    window.addEventListener('touchstart',function(event) {
+        gnStartX = event.touches[0].pageX;
+    },false);
+
+    window.addEventListener('touchmove',function(event) {
+        gnEndX = event.touches[0].pageX;
+    },false);
+
+    window.addEventListener('touchend',function(event) {
+        var swipeLength = 100;//window.innerWidth / 3;
+        if(gnEndX > 0 && ((gnStartX - gnEndX) > swipeLength || (gnEndX - gnStartX) > swipeLength)) {
+            if(gnStartX > gnEndX)
+                setStep(currentStep+1);
+            else
+                setStep(currentStep-1);
+            // reset coordinates
+            gnStartX = gnEndX = -1;
+        }
+    },false);
+}
+	
+	</script>
+	
+</html>
