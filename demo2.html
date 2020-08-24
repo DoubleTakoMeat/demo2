@@ -377,9 +377,7 @@
 	
 	var touchStart = [0,0];
 	var setep=["wrap_1","wrap_2","wrap_3","wrap_4"]
-	
-
-     var gnStartY = -1;
+    var gnStartY = -1;
     var gnEndY = -1;
 	
     window.addEventListener('touchstart',function(event) {
@@ -394,16 +392,13 @@
 	var i=0 
 	
     window.addEventListener('touchend',function(event) {
-        var swipeLength = 100;//window.innerWidth / 3;
-		
-		
+        var swipeLength = 100;//window.innerWidth / 3;		
         if(gnEndY > 0 && ((gnStartY - gnEndY) > swipeLength || (gnEndY - gnStartY) > swipeLength)) {    
 			if(gnStartY > gnEndY){          
 				if(i >=3){i=2}	
 				i++			
 				document.getElementsByClassName(setep[i - 1])[0].style.display="none"	
-				document.getElementsByClassName(setep[i])[0].style.display="block"
-				
+				document.getElementsByClassName(setep[i])[0].style.display="block"			
 				}					
 			
 			if(gnStartY < gnEndY){          			
@@ -411,14 +406,40 @@
 				i--				
 				document.getElementsByClassName(setep[i + 1])[0].style.display="none"	
 				document.getElementsByClassName(setep[i])[0].style.display="block"	
-				}	
-			
-				
+				}			
         }
 
-	console.log(i)}
-	
+	}	
 	)
+	
+	function MouseWheel (e) {
+	e = e || window.event;
+	console.log(e.wheelDelta)
+	if(e.wheelDelta <= -100){
+		if(i >=3){i=2}	
+				i++			
+				document.getElementsByClassName(setep[i - 1])[0].style.display="none"	
+				document.getElementsByClassName(setep[i])[0].style.display="block"		
+				console.log(i)
+	}	
+	
+	if(e.wheelDelta >= 100){
+		if(i <= 0){i=1}
+				i--				
+				document.getElementsByClassName(setep[i + 1])[0].style.display="none"	
+				document.getElementsByClassName(setep[i])[0].style.display="block"	
+				console.log(i)		
+	}
+	}
+	
+	if ('onmousewheel' in window) {
+		window.onmousewheel = MouseWheel;
+	} else if ('onmousewheel' in document) {
+		document.onmousewheel = MouseWheel;
+	} else if ('addEventListener' in window) {
+		window.addEventListener("mousewheel", MouseWheel, false);
+		window.addEventListener("DOMMouseScroll", MouseWheel, false);
+	}
 	</script>
 	
 </html>
