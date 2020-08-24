@@ -9,6 +9,23 @@
 	
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+	
+	@keyframes changePage{
+		0% {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		transform-origin:0 0;		
+		opacity: 0;
+	 }
+		100% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);	
+		transform-origin:0 0;
+		opacity: 1;
+	}
+	}
+	
+	
 	*{
 	text-decoration:none;
 	color:#000;
@@ -17,6 +34,7 @@
 	
 	body{
 	width:100vw;
+	overflow:hidden;
 	}
 	
 	.head_bar{
@@ -27,20 +45,44 @@
 	font-size:40px;
 	line-height:40px;
 	padding-left:5px;
+	z-index:1
 	}
 	
-	.wrap_1{
-	width:100vw;
-	height:100vh ;
+	.head_bar h1{
+	color: #FFF;
+    text-shadow: 4px 4px 8px #555;
 	}
 	
 	.content{
 	width:auto ;
 	height:100% ;
 	padding: 45px 15px 0 15px;
-	background: linear-gradient(0deg,#008f06,#FFE,#ff8989cc,#ff8989de);
 	box-sizing: border-box;
+	animation:changePage 0.5s linear;	
 	
+	}
+	
+	.wrap_1 , .wrap_2 , .wrap_3 , .wrap_4{
+	width:100vw;
+	height:100vh;
+	}
+	
+	
+	
+	.wrap_1 {
+	background: linear-gradient(0deg,#008f06,#FFE,#ff8989cc,#ff8989de);
+	}
+	
+	.wrap_2 {
+	background: linear-gradient(0deg,#ff1919de,#ffb1b1,#ffee59c9,#ffee59,#ffbf00d1);
+    }
+	
+	.wrap_3 {
+	background: linear-gradient(170deg,#6c2189,#a776ef,#4962ebcc,#1d20e9d9);
+	}
+	
+	.wrap_4 {
+	background: linear-gradient(0deg,#008f06,#FFE,#ff8989cc,#ff8989de);
 	}
 	
 	.column1{
@@ -88,12 +130,14 @@
 	display:flex;
 	flex-direction:column;
 	align-items:center;
+	justify-content:center;
 	position: relative;
 	}
 	
 	.column2 .tiny_box{
 	display:flex;
 	height: 28%;
+	max-width: 254px;
 	flex-direction:column;
 	align-items:center;
 	text-align:center;
@@ -115,10 +159,7 @@
 	
 	.column2 .tiny_box .icon_box{
 	width: 70px;
-    height: 70px;
-	position:relative;
-	background:#FFF;
-	border-radius:50%;
+    height: 60px;
 	}
 	
 	.background_text p{
@@ -130,7 +171,7 @@
     left: -84px;
 	text-shadow: -3px 9px 15px #dd93c1;
     transform: rotate(270deg);
-    opacity: 0.8;
+    opacity: 0.5;
 	display:none;
 	}
 	
@@ -138,17 +179,12 @@
 		.head_bar{
 		height:100px;
 		font-size:80px;
-		line-height:100px;
+		line-height:110px;
 		padding-left:40px;
 		}
 		
-		.wrap_1{
-		width:100vw;
-		height:100vh;
-		}
-		
 		.content{
-		padding: 100px 15px 0 15px;
+		padding: 100px 50px 0 50px;
 		}
 		
 		.column1{
@@ -185,14 +221,13 @@
 		font-size:17px;
 		flex-direction:column;
 		text-align:justify;
-		margin:auto;
-		margin-top: 15px;
+		margin:15px 20px;
 		padding:3px 20px 15px 20px;
 		}
 		
 		.column2 .tiny_box .icon_box {
 		width: 85px;
-		height: 75px;
+		height: 67px;
 		}
 		
 		.column2 .tiny_box img{
@@ -223,7 +258,7 @@
 			<h1>ISAN FARM</h1>
 		</div>
 		
-		<div class="wrap_1">
+		<div class="wrap_1" style="display:block">
 			<div class="content">
 				<div class="background_text">
 					<p>APPLE</p>  
@@ -248,7 +283,7 @@
 						<p>喝膩了甜膩的碳酸飲料及卡路里大餐，不如利用蘋果做一份爽口的健康飲料如何?</p>				
 					</div>
 					<div class="tiny_box">
-						<div class="icon_box"><img src="pic/skin.png"></img></div>
+						<div class="icon_box"><img src="pic/hand.png"></img></div>
 						<h3>皮膚光滑澈</h3>
 						<p>豐富的維他命C及蘋果多酚，讓你的肌膚像蘋果一樣光亮透紅。</p>					
 					</div>				
@@ -257,18 +292,76 @@
 			</div>
 		</div>
 		
-		<div class="wrap_2">
-		
-		
+		<div class="wrap_2" style="display:none">
+			<div class="content">
+				<div class="background_text">
+					<p>MANGO</p>  
+				</div>
+				<div class="column1">
+						<div class="introduct_apple">
+						<h2>愛文芒果</h2>
+						<p>太陽果</p>
+						<pre style="left:-20px;position: relative;">吸收陽光的恩惠，皮紅肉黃，香氣濃郁</pre>
+					</div>
+					<div class="apple_img"></div>
+				</div>
+				<div class="column2">
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/gold1.png"></img></div>
+						<h3>黃金之心</h3>
+						<p>沐浴著迎面而來的陽光，一點一滴的精華都收藏在那香氣誘人的赤皮之下。</p>
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/mango_drink2.png"></img></div>
+						<h3>消暑清涼一下</h3>
+						<p>炎炎夏日，還有什麼比一杯芒果冰沙更能夠振奮人心呢!?</p>				
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/vitamin1.png"></img></div>
+						<h3>維生素A之冠</h3>
+						<p>擁有其他水果望塵莫及維生素A，不只照顧眼睛疲勞，更能幫助骨骼發展。</p>					
+					</div>				
+				</div>
+				
+			</div>
 		</div>
 		
-		<div class="wrap_3">
-		
-		
+		<div class="wrap_3" style="display:none">
+			<div class="content">
+				<div class="background_text">
+					<p>GRAPE</p>  
+				</div>
+				<div class="column1">
+						<div class="introduct_apple">
+						<h2>巨峰葡萄</h2>
+						<p>一顆一顆</p>
+						<pre style="left:-20px;position: relative;">察覺時已只剩支架</pre>
+					</div>
+					<div class="apple_img"></div>
+				</div>
+				<div class="column2">
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/around.png"></img></div>
+						<h3>全球都瘋狂</h3>
+						<p>作為葡萄界中最大顆的老大哥，環遍世界都能看到看到我的蹤跡。</p>
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/wine1.png"></img></div>
+						<h3>美酒佳釀</h3>
+						<p>那殘存的精釀，香甜輕馥又夾帶著細緻酸味，體驗到葡萄他不為人知的一面。</p>				
+					</div>
+					<div class="tiny_box">
+						<div class="icon_box"><img src="pic/face.png"></img></div>
+						<h3>抗老抗皺紋</h3>
+						<p>近年發現的前花青素，強效的抗氧化功能保護著細胞的完整，防止臉上出現一道道紋路。</p>					
+					</div>				
+				</div>
+				
+			</div>
 		</div>
 		
-		<div class="wrap_4">
-		
+		<div class="wrap_4" style="display:none">
+			<h3>訂購表單</h3>
 		
 		</div>
 
@@ -279,37 +372,53 @@
 	</body>
 	
 	<script>
-	var currentStep = 1;
-	var totalSteps = 4;
-	var animating = false;
-	var touchStart = [0,0];
-
 	
-	function onSwipe() {
-    var gnStartX = -1;
-    var gnEndX = -1;
+	
+	
+	var touchStart = [0,0];
+	var setep=["wrap_1","wrap_2","wrap_3","wrap_4"]
+	
 
+     var gnStartY = -1;
+    var gnEndY = -1;
+	
     window.addEventListener('touchstart',function(event) {
-        gnStartX = event.touches[0].pageX;
+        gnStartY = event.touches[0].clientY;
+
     },false);
 
     window.addEventListener('touchmove',function(event) {
-        gnEndX = event.touches[0].pageX;
+		gnEndY= event.touches[0].clientY;
+	
     },false);
-
+	var i=0 
+	
     window.addEventListener('touchend',function(event) {
         var swipeLength = 100;//window.innerWidth / 3;
-        if(gnEndX > 0 && ((gnStartX - gnEndX) > swipeLength || (gnEndX - gnStartX) > swipeLength)) {
-            if(gnStartX > gnEndX)
-                setStep(currentStep+1);
-            else
-                setStep(currentStep-1);
-            // reset coordinates
-            gnStartX = gnEndX = -1;
+		
+		
+        if(gnEndY > 0 && ((gnStartY - gnEndY) > swipeLength || (gnEndY - gnStartY) > swipeLength)) {    
+			if(gnStartY > gnEndY){          
+				if(i >=3){i=2}	
+				i++			
+				document.getElementsByClassName(setep[i - 1])[0].style.display="none"	
+				document.getElementsByClassName(setep[i])[0].style.display="block"
+				
+				}					
+			
+			if(gnStartY < gnEndY){          			
+				if(i <= 0){i=1}
+				i--				
+				document.getElementsByClassName(setep[i + 1])[0].style.display="none"	
+				document.getElementsByClassName(setep[i])[0].style.display="block"	
+				}	
+			
+				
         }
-    },false);
-}
+
+	console.log(i)}
 	
+	)
 	</script>
 	
 </html>
