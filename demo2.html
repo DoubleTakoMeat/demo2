@@ -38,9 +38,9 @@
 	}
 	
 	.head_bar{
-	width:100vw;
+	width:300px;
 	height:40px;
-	position:fixed;
+	position:absolute;
 	color:#fff;
 	font-size:40px;
 	line-height:40px;
@@ -48,9 +48,82 @@
 	z-index:1
 	}
 	
-	.head_bar h1{
-	color: #FFF;
-    text-shadow: 4px 4px 8px #555;
+	.head_bar h2{
+	color: #000;
+    text-shadow: 4px 4px 8px #9b979796;
+	white-space: nowrap;
+	}
+	
+	.mainhead_bar {
+	position: absolute;
+    top: 30%;
+    left: calc(50% - 150px);
+	color:#FFF;
+    font-size: 57px;
+    z-index: 1;
+	}	
+	
+	.mainhead_bar h1{
+	text-shadow:0 0 5px #fff;
+	}
+	.page_mark{
+	position:fixed;
+	right:0;
+	top:calc(50% - 40px);
+	width:30px;
+	z-index:1;
+	}
+	
+	.page1 ,.page2 ,.page3 ,.page4 ,.page5{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	margin:5px;
+	}
+	
+	.main{
+	width: 100vw;
+    height: 100vh;
+	}
+	
+	.main_background{
+	width:100%;
+	height:100%;
+	background:url("pic/main_background.jpg");
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	opacity:0.8;
+	}
+	
+	.arrow{
+	position: absolute;
+    top: 80%;
+    left: calc(50% - 63px);
+    font-size: 30px;
+    text-align: center;
+	}
+
+	
+	.wrap_1 , .wrap_2 , .wrap_3 , .wrap_4{
+	width:100vw;
+	height:100vh;
+	}
+	
+	.wrap_1 {
+	background: linear-gradient(17deg,#008f06de,#008f0533,#a4ff9bde,#a2ff9824,#56ec79);
+	}
+	
+	.wrap_2 {
+	background: linear-gradient(17deg,#ffbf00dE,#ffee5982,#ffee59,#FFB,#ffbf05)
+    }
+	
+	.wrap_3 {
+	background: linear-gradient(17deg,#4f4bdde6,#cfbdeb,#8296fbcc,#a7ecf9,#5355efd9);
+	}
+	
+	.wrap_4 {
+	background: linear-gradient(17deg,#e52e21,#ed8e9a87,#ff8e8ed4,#ed979757,#fe6363de);
 	}
 	
 	.content{
@@ -59,30 +132,6 @@
 	padding: 45px 15px 0 15px;
 	box-sizing: border-box;
 	animation:changePage 0.5s linear;	
-	
-	}
-	
-	.wrap_1 , .wrap_2 , .wrap_3 , .wrap_4{
-	width:100vw;
-	height:100vh;
-	}
-	
-	
-	
-	.wrap_1 {
-	background: linear-gradient(0deg,#008f06,#FFE,#ff8989cc,#ff8989de);
-	}
-	
-	.wrap_2 {
-	background: linear-gradient(0deg,#ff1919de,#ffb1b1,#ffee59c9,#ffee59,#ffbf00d1);
-    }
-	
-	.wrap_3 {
-	background: linear-gradient(170deg,#6c2189,#a776ef,#4962ebcc,#1d20e9d9);
-	}
-	
-	.wrap_4 {
-	background: linear-gradient(0deg,#008f06,#FFE,#ff8989cc,#ff8989de);
 	}
 	
 	.column1{
@@ -98,30 +147,38 @@
 	}
 	
 	.introduct_apple h2{
-	font-weight:30;
-	font-size:30px;
-	font-style:italic;
-	text-decoration:underline;
-	text-shadow: 2px 2px 3px #333;
-	color:#FFF;
+	font-weight:50;
+	font-size:27px;
+	font-family:"NSimSun";
+	color:#000;
+	 white-space: nowrap;
 	}
 
 	
 	.introduct_apple p{
-	font-size:25px;
-	line-height:35px;
-	text-align:end;
-	text-shadow: 2px 2px 3px #333;
-	color:#FFF;
+	font-size:20px;
+	line-height:30px;
+	text-align:end;	
+	color:#000;
+	font-family:"NSimSun";
 	}
 	
-	.column1 .apple_img{
-	background:url("pic/apple4.jpg");
+	.big_word{
+	font-size:33px; 
+	font-weight:bold;
+	font-family: "NSimSun";
+	}
+	
+	.column1 .fruit_png{
 	background-size: 100%;
 	background-repeat: no-repeat;
-	width:40%;
+	width:34%;
 	height:115px;
 	}
+	
+	.wrap_1 .fruit_png{background-image:url("pic/apple2.png") ;}
+	.wrap_2 .fruit_png{background-image:url("pic/mango1.png") ;}
+	.wrap_3 .fruit_png{background-image:url("pic/grape1.png") ;}
 
 	.column2{
 	width:90%;
@@ -130,7 +187,7 @@
 	display:flex;
 	flex-direction:column;
 	align-items:center;
-	justify-content:center;
+	justify-content: center;
 	position: relative;
 	}
 	
@@ -143,9 +200,9 @@
 	text-align:center;
 	margin: 15px 5px 0 5px;
 	padding:3px;
-	background:#fff;
-	background:rgba(255,255,255,0.6	);
+	background:rgba(255,255,255,0.5);
 	font-weight:600;
+	border-radius: 15px;
 	}
 	
 	.column2 .tiny_box h3{
@@ -175,6 +232,51 @@
 	display:none;
 	}
 	
+	.form_wrap{
+	width: auto;
+    height: 100%;
+    padding: 45px 15px 0 15px;
+    box-sizing: border-box;
+	}
+	
+	.form_wrap h3{
+	text-align:center; 
+	font-size:40px;
+	line-height:80px;
+	}
+	
+	.form_content{
+	margin: auto;
+	width: 100%;
+	margin-top: 30px;
+	line-height: 40px;
+	font-size: 20px;	
+	background:rgba(255,255,255,0.4)
+	}
+		
+	.form_content input, .form_content select{
+	border-radius: 4px;
+	border: none;
+	height: 30px;
+	font-size:20px;
+	vertical-align: middle;
+	}
+	
+	.form_content select{
+	width: 100px;
+	font-size:15px;
+	}
+	
+	.buy_it{
+	width: 80px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+    margin: auto;
+    display: flex;
+	background: rgb(85 220 236);
+	}
+	
 	@media screen and (min-width: 760px){
 		.head_bar{
 		height:100px;
@@ -183,23 +285,29 @@
 		padding-left:40px;
 		}
 		
+		.mainhead_bar {
+		position: absolute;
+		top: 30%;
+		left: calc(50% - 270px);
+		color:#FFF;
+		font-size: 100px;
+		z-index: 1;
+		}
+		
 		.content{
 		padding: 100px 50px 0 50px;
 		}
-		
+	
 		.column1{
 		height:40vh;
-		margin-bottom:20px;
-		
+		margin-bottom:20px;		
 		}
 
-		
-		.column1 .apple_img{
-		background:url("pic/apple3.jpg") ;
+		.column1 .fruit_png{
 		background-size: 100%;
 		background-repeat: no-repeat;
-		width: 40%;
-		height: 40vh;
+		width: 245px;
+		height: 245px;
 		}
 		
 		.introduct_apple {
@@ -208,19 +316,33 @@
 		padding-left: 70px;
 		}
 		
+		.introduct_apple h2{
+		font-size:40px;
+		}
+		
+		.introduct_apple p{
+		font-size:35px;
+		line-height:40px;
+		}
+		
+		.big_word{
+		font-size:45px; 
+		font-weight:bold;
+		font-family: "NSimSun";
+		}
+		
 		.column2{
 		flex-direction:row;
 		height:38vh;
 		}
 		
 		.column2 .tiny_box{
-		display:flex;
 		width:200px;		    
-		height: 185px;
+		height: 40vh;
+		max-height: 230px;
+		min-width: 185px;
 		line-height:20px;
 		font-size:17px;
-		flex-direction:column;
-		text-align:justify;
 		margin:15px 20px;
 		padding:3px 20px 15px 20px;
 		}
@@ -238,7 +360,7 @@
 		}
 		
 		.column2 .tiny_box h3{
-		font-size:25px;
+		font-size:23px;
 		line-height:40px;
 		}
 		
@@ -246,6 +368,39 @@
 		display:block;
 		}
 		
+		.form_wrap{
+		padding: 100px 50px 0 50px;
+		}
+		
+		.form_wrap h3{
+		text-align:center; 
+		font-size:40px;
+		line-height:80px;
+		}
+		
+		.form_content{
+		margin: auto;
+		width: 50%;
+		max-width: 370px;
+		margin-top: 40px;
+		line-height: 45px;
+		font-size: 20px;
+		background: rgba(255,255,255,0.4);
+		padding:20px 40px;
+		}
+		
+		.form_content input, .form_content select{
+		border-radius: 4px;
+		border: none;
+		width: 200px;
+		height: 30px;
+		font-size:20px;
+		vertical-align: middle;
+		}
+		
+		.form_content select{
+		width:135px;
+		}
 	}
 	
 	</style>
@@ -254,11 +409,25 @@
 	
 	
 	<body>
-		<div class="head_bar">
-			<h1>ISAN FARM</h1>
+		<div class="page_mark">
+			<div class="page1" style="background:#000;"></div>
+			<div class="page2" style="background:#fff;"></div>
+			<div class="page3" style="background:#fff;"></div>
+			<div class="page4" style="background:#fff;"></div>
+			<div class="page5" style="background:#fff;"></div>
+		</div>
+		<div class="main" style="display:block">
+			<div class="main_background"></div>
+			<div class="mainhead_bar">
+				<h1>ISAN FARM</h1>
+			</div>
+			<div class="arrow"><span style="font-size:18px">向下滾動看更多</span><br><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
 		</div>
 		
-		<div class="wrap_1" style="display:block">
+		<div class="wrap_1" style="display:none">
+			<div class="head_bar">
+				<h2>ISAN FARM</h2>
+			</div>
 			<div class="content">
 				<div class="background_text">
 					<p>APPLE</p>  
@@ -266,10 +435,10 @@
 				<div class="column1">
 						<div class="introduct_apple">
 						<h2>梨山蜜蘋果</h2>
-						<p>結蜜</p>
-						<pre style="left:-20px;position: relative;">正是蜜蘋果越挫越勇的證明</pre>
+						<p>結<span class="big_word">蜜</span></p>
+						<p style="position:relative;left:-40px;width:155px">正是蜜蘋果越挫越勇的證明</p>
 					</div>
-					<div class="apple_img"></div>
+					<div class="fruit_png"></div>
 				</div>
 				<div class="column2">
 					<div class="tiny_box">
@@ -293,6 +462,9 @@
 		</div>
 		
 		<div class="wrap_2" style="display:none">
+			<div class="head_bar">
+				<h2>ISAN FARM</h2>
+			</div>
 			<div class="content">
 				<div class="background_text">
 					<p>MANGO</p>  
@@ -300,10 +472,10 @@
 				<div class="column1">
 						<div class="introduct_apple">
 						<h2>愛文芒果</h2>
-						<p>太陽果</p>
-						<pre style="left:-20px;position: relative;">吸收陽光的恩惠，皮紅肉黃，香氣濃郁</pre>
+						<p><span class="big_word">太陽</span>果</p>
+						<p style="position:relative;left:-45px; width:200px">皮紅肉黃，香氣濃郁</p>
 					</div>
-					<div class="apple_img"></div>
+					<div class="fruit_png"></div>
 				</div>
 				<div class="column2">
 					<div class="tiny_box">
@@ -327,6 +499,9 @@
 		</div>
 		
 		<div class="wrap_3" style="display:none">
+			<div class="head_bar">
+				<h2>ISAN FARM</h2>
+			</div>
 			<div class="content">
 				<div class="background_text">
 					<p>GRAPE</p>  
@@ -334,10 +509,10 @@
 				<div class="column1">
 						<div class="introduct_apple">
 						<h2>巨峰葡萄</h2>
-						<p>一顆一顆</p>
-						<pre style="left:-20px;position: relative;">察覺時已剩支架</pre>
+						<p>一顆一<span class="big_word";>顆</span></p>
+						<p style="position:relative;left:-45px">察覺時已剩支架</p>
 					</div>
-					<div class="apple_img"></div>
+					<div class="fruit_png"></div>
 				</div>
 				<div class="column2">
 					<div class="tiny_box">
@@ -360,9 +535,41 @@
 			</div>
 		</div>
 		
-		<div class="wrap_4" style="display:none">
-			<h3>訂購表單</h3>
-		
+		<div class="wrap_4" style="display:block">
+			<div class="head_bar">
+				<h2>ISAN FARM</h2>
+			</div>
+			<div class="form_wrap" >
+				<h3>訂購表單</h3>
+				<form class="form_content" action="" mention="" name="buy_list">
+					<p>名稱:<input></input></p>
+					<p>電話:<input></input></p>
+					<p>地址:<input style="width:271px"></input></p>
+					<p>地址2:<input style="width:260px"></input></p>
+					<p>出生日期:<input style="width:60px"></input>年<input style="width:35px"></input>月<input style="width:35px"></input>日</p>
+					<p>訂購種類
+						<select name="choose_fruit">
+							<option value="1">梨山蜜蘋果</option>
+							<option value="2">愛文芒果</option>
+							<option value="3">巨峰葡萄</option>
+						</select>
+						<select name="choose_price">
+							<option value="1000">大箱1000元</option>
+							<option value="500">中箱500元</option>
+							<option value="200">小盒200元</option>
+						</select>
+					</p>
+					<p>訂購數量
+						<select name="choose_quanity" style="width:50px; text-align:center">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</p>
+					<input class="buy_it" type="button" id="evaluate" value="訂購"></input>
+				</form>
+			</div>
 		</div>
 
 		
@@ -371,12 +578,13 @@
 	
 	</body>
 	
+	
+	
 	<script>
 	
-	
-	
 	var touchStart = [0,0];
-	var setep=["wrap_1","wrap_2","wrap_3","wrap_4"]
+	var setep=["main","wrap_1","wrap_2","wrap_3","wrap_4"]
+	var page=["page1","page2","page3","page4","page5"]
     var gnStartY = -1;
     var gnEndY = -1;
 	
@@ -395,10 +603,12 @@
         var swipeLength = 100;//window.innerWidth / 3;		
         if(gnEndY > 0 && ((gnStartY - gnEndY) > swipeLength || (gnEndY - gnStartY) > swipeLength)) {    
 			if(gnStartY > gnEndY){          
-				if(i >=3){i=2}	
+				if(i >=4){i=3}	
 				i++			
 				document.getElementsByClassName(setep[i - 1])[0].style.display="none"	
-				document.getElementsByClassName(setep[i])[0].style.display="block"			
+				document.getElementsByClassName(setep[i])[0].style.display="block"	
+				document.getElementsByClassName(page[i - 1])[0].style.background="#fff"	
+				document.getElementsByClassName(page[i])[0].style.background="#000"							
 				}					
 			
 			if(gnStartY < gnEndY){          			
@@ -406,6 +616,8 @@
 				i--				
 				document.getElementsByClassName(setep[i + 1])[0].style.display="none"	
 				document.getElementsByClassName(setep[i])[0].style.display="block"	
+				document.getElementsByClassName(page[i + 1])[0].style.background="#fff"	
+				document.getElementsByClassName(page[i])[0].style.background="#000"	
 				}			
         }
 
@@ -416,11 +628,12 @@
 	e = e || window.event;
 	console.log(e.wheelDelta)
 	if(e.wheelDelta <= -100){
-		if(i >=3){i=2}	
+		if(i >=4){i=3}	
 				i++			
 				document.getElementsByClassName(setep[i - 1])[0].style.display="none"	
 				document.getElementsByClassName(setep[i])[0].style.display="block"		
-				console.log(i)
+				document.getElementsByClassName(page[i - 1])[0].style.background="#fff"	
+				document.getElementsByClassName(page[i])[0].style.background="#000"		
 	}	
 	
 	if(e.wheelDelta >= 100){
@@ -428,7 +641,8 @@
 				i--				
 				document.getElementsByClassName(setep[i + 1])[0].style.display="none"	
 				document.getElementsByClassName(setep[i])[0].style.display="block"	
-				console.log(i)		
+				document.getElementsByClassName(page[i + 1])[0].style.background="#fff"	
+				document.getElementsByClassName(page[i])[0].style.background="#000"		
 	}
 	}
 	
